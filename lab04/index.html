@@ -5,28 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Recesamant</h1>
-    <form>
-        <label for="fnume">Nume</label>
-        <input type="text" id="fnume" name="fnume">
-        <label for="fprenume">Prenume</label>
-        <input type="text" id="fprenume" name="fprenume">
 
-        <label for="fstrada">Strada</label>
-        <input type="text" id="fstrada" name="fstrada">
 
-        <label for="fnumar">Numarul</label>
-        <input type="text" id="fnumar" name="fnumar">
+    <table border="1">
+        <thead>
+            <tr>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="2" class="latime2 inaltime2" colspan="2">4</td>
+                <td colspan="5" class="latime6">5</td>
+                <td rowspan="3" colspan="3" class="inaltime3 latime4">7</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="latime6">6</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="latime8">14</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="latime4">2</td>
+                <td colspan="2" rowspan="3" class="latime3 inaltime4">1</td>
+                <td colspan="5" class="latime6">15</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td colspan ="2" class="latime2 inaltime2">3</td>
+                <td>18</td>
+                <td colspan ="2" class="inaltime2 latime3">9</td>
+                <td colspan ="2" rowspan="2" class="inaltime3 latime2">8</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2" class="latime2 inaltime2">12</td>
+                <td colspan="2" class="latime2">17</td>
+                <td colspan="2" class="latime2">10</td>
+            </tr>
+            <tr>
+                <td colspan="3"class="latime3">11</td>
+                <td colspan="5"class="latime6">16</td>
+            </tr>
+            </tbody>
 
-        <br/>
-        <br/>
-        <button type="button" formaction="https://web.ciuca.ro/cerere" formmethod="get">Trimite Extern Get</button>
-        <button type="button" formaction="https://web.ciuca.ro/cerere" formmethod="post">Trimite Extern Post</button>
-        <button type="button" formaction="http://localhost:82/cerere.php" formmethod="get">Trimite Extern Get Prin PHP</button>
-        <button type="button" formaction="http://localhost:82/cerere.php" formmethod="post">Trimite Extern Post Prin PHP</button>
+
         
-    </form>
+
+        
+
+        
+    </table>
 </body>
 </html>
