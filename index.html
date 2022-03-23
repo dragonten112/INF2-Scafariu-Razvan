@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Recesamant</h1>
+    <form>
+        <label for="fnume">Nume</label>
+        <input type="text" id="fnume" name="fnume">
+        <label for="fprenume">Prenume</label>
+        <input type="text" id="fprenume" name="fprenume">
+
+        <label for="fstrada">Strada</label>
+        <input type="text" id="fstrada" name="fstrada">
+
+        <label for="fnumar">Numarul</label>
+        <input type="text" id="fnumar" name="fnumar">
+
+        <br/>
+        <br/>
+        <button type="button" formaction="https://web.ciuca.ro/cerere" formmethod="get">Trimite Extern Get</button>
+        <button type="button" formaction="https://web.ciuca.ro/cerere" formmethod="post">Trimite Extern Post</button>
+        <button type="button" formaction="http://localhost:82/cerere.php" formmethod="get">Trimite Extern Get Prin PHP</button>
+        <button type="button" formaction="http://localhost:82/cerere.php" formmethod="post">Trimite Extern Post Prin PHP</button>
+        
+    </form>
+</body>
+</html>
