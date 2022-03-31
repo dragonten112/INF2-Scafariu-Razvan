@@ -1,0 +1,34 @@
+h1 {
+  color: rgb(136, 9, 47);
+}
+
+h2 {
+  color: aliceblue;
+}
+
+h2:hover {
+  color: green;
+}
+
+body {
+  background-image: url(https://th.bing.com/th/id/R.b9ae80bc3db3d31fcb21f1c3b3a924f6?rik=RCn1cmWXNgdfdg&pid=ImgRaw&r=0);
+}
+
+.font1 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h4 {
+  color: aliceblue;
+  border: 1px solid red;
+  background-color: black;
+  color: aliceblue;
+  margin-top: 200px;
+  margin-right: 150px;
+  margin-bottom: 100px;
+  margin-left: 150px;
+}
+
+h3 {
+  color: aliceblue;
+}/*# sourceMappingURL=stilurile.css.map */
