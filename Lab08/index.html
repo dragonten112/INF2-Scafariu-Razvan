@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Verificare CNP</h1>
+    <h2>Apasa F12</h2>
+    <h3>validareCNP("ex de cnp")</h3>
+    <H4>5000230130006 -> CNP in care nu exista data (an bisect)</H4>
+    <script>
+        // cod Javascript
+    </script>
+</head>
+<body>
+    <h1>Javascript: Lab 8</h1>
+    <script>
+        // cod Javascript
+        //alert("acum suntem in index.html");
+        console.log("mesaj din index.html");
+    </script>
+    <script src="/scripts/scripturi.js"></script>
+    <script>
+        var a=5;
+        const pi=3.14;
+        {
+            let b="6";
+            var a1=3;
+            //pi=3.15;
+            console.log(b);
+        }
+        let carte="Cartea 'Javascript' este disponibila";
+        console.log(a1);
+        let valid=true;
+        let obiect={x:5,y:-3};
+        let tablou=[2,"ceva",,false,{}];
+        let s=Symbol();
+        let u;
+        // function adunare(a,b){
+        //     return a+b;
+        // }
+        // function adunare(a,b,c){
+        //     return a+b+c;
+        // }
+        function adunare(){
+            //console.log(arguments);
+            let suma=0;
+            for(let i=0;i<arguments.length;i++){
+                if(typeof(arguments[i])=="number")
+                suma+=arguments[i];
+            }
+            //console.log(i);
+            return suma;
+        }
+
+        
+function validareCNP(cnp) {
+    //console.log("Avem un string?");
+    if (typeof (cnp) != "string") return "NU ESTE STRING!!!!!!!!";
+    //console.log("Da, avem un string.");
+    //console.log("Are 13 caractere?");
+    if (cnp.length != 13) return false;
+    //console.log("Da, are 13 caractere.");
+    //console.log("Toate caracterele sunt cifre?");
+    for (let e of cnp.split("")) if (!esteCifra(e)) return "NU ESTE CIFRA!!";
+    //console.log("Da, toate caracterele sunt cifre.");
+    let s = cnp.substr(0, 1);
+    if (s == 0) return false;
+    //console.log(s);
+    let an = cnp.substr(1, 2);
+    let luna = cnp.substr(3, 2);
+    let zi = cnp.substr(5, 2);
+    if (s == 1 || s == 2) an = "19" + an;
+    if (s == 3 || s == 4) an = "18" + an;
+    if (s == 5 || s == 6) an = "20" + an;
+    if (an.length == 4) {
+        let dn = new Date(an, luna - 1, zi);
+        //console.log(dn);
+        if (an != dn.getFullYear() || luna != (dn.getMonth() + 1) || zi != dn.getDate()) return "NU ESTE DATA!!! ? DC?";
+    }
+    const cheie = "279146358279";
+    let suma = 0;
+    for (let i = 0; i < cheie.length; i++)suma += cheie.substr(i, 1) * cnp.substr(i, 1);
+    suma %= 11;
+    //console.log(suma);
+    suma = suma == 10 ? 1 : suma;
+    if (suma == cnp.substr(12, 1)) return true;
+    return false;
+}
+
+function esteCifra(cifra) {
+    if (typeof (cifra) != "string") return false;
+    if (cifra.length != 1) return false;
+    if ((cifra.charCodeAt(0) > 47) && (cifra.charCodeAt(0) < 58)) return true;
+    return false;
+}
+    </script>
+</body>
+</html>
