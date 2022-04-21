@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="titlu">Cursul 9</h1>
+    <input type="password" id="iParola"/>
+    <input type="checkbox" id="aParola"/>
+    <input type="hidden" name="hParola"/>
+    <div id="mesaj"> </div>
+    <script>
+        const titlu=document.getElementsByClassName("titlu")[0]
+        titlu.innerText="Parola: 00000";
+        const checkParola=document.getElementById("aParola")
+        const inpParola=document.getElementById("iParola")
+        const hidParola=document.getElementsByName("hParola")[0]
+        checkParola.addEventListener("change",function()
+        {
+            if(this.checked){inpParola.setAttribute("type","text")}
+            else{inpParola.setAttribute("type","password")}
+
+        })
+    hidParola.value=Hash(inpParola.value)
+    
+    const dMesaj=document.getElementById("mesaj")
+    let e= document.createElement("span")
+    e.setAttribute("style","color:red")
+    e.innerText="Parola a fost salvata cu succesuri."
+    dMesaj.appendChild(e)
+
+    </script>
+</body>
+</html>
